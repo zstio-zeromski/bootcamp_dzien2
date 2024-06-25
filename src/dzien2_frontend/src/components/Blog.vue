@@ -1,9 +1,12 @@
 <template>
     <div>
-        <button @click="pobierzWpisy">refresh</button>
+        <h1>Wszystkie wpisy:</h1>
+        <button @click="pobierzWpisy">wyświetl wszystkie wpisy</button>
         {{ wpisy }}
+        <br>
+        <h1>Podaj nowy wpis:</h1>
         <input v-model="nowyBlog" type="text"> 
-        <button @click="dodajWpisy">dodaj</button>
+        <button @click="dodajWpisy">dodaj wpis</button>
         {{ nowyBlog }}
     </div>
 </template>
