@@ -1,3 +1,4 @@
 service : {
     "greet": (text, int8) -> (text) query;
+    "dodaj_wpis": (text) -> ();
 }
