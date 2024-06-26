@@ -5,11 +5,15 @@
             <button class="bg-blue-600 rounded-md text-white p-4" @click="pobierzWpisy">odświerz</button>
         </div>
         <div class="grid mx-6 gap-4 my-4">
-            <div v-for="wpis in wpisy" class="drop-shadow-x1 bg-stone-300 p-4"><p>{{ wpis }}</p></div>
+            <div v-for="(wpis, index) in wpisy" class="drop-shadow-x1 bg-stone-300 p-4">
+                <p>id: {{ index }}</p>
+                <p>{{ wpis }}</p>
+            </div>
         </div>
-        <input class="border-2 border-blue-600 p-4" v-model="nowyBlog" type="text"> 
-        <button class="bg-blue-600 rounded-md text-white p-4" @click="dodajWpisy">dodaj wpis</button>
-        {{ nowyBlog }}
+        <div class="flex justify-center flex-col">
+            <input class="border-2 border-blue-600 p-4" v-model="nowyBlog" type="text"> 
+            <button class="bg-blue-600 rounded-md text-white p-4" @click="dodajWpisy">dodaj wpis</button>
+        </div>
     </div>
 </template>
 
